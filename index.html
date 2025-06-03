@@ -12,13 +12,18 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 
-  <!-- Load your form bundle -->
+  <!-- Load your embed script -->
   <script src="https://haksyard.vercel.app/inquiry-form-vite/dist/assets/embed-form.js"></script>
-  <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    mountEmbedForm('google-sheet-inquiry-form');
-  });
-</script>
 
+  <!-- Call the mount function -->
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      if (typeof window.mountEmbedForm === "function") {
+        window.mountEmbedForm("google-sheet-inquiry-form");
+      } else {
+        console.error("mountEmbedForm is not defined");
+      }
+    });
+  </script>
 </body>
 </html>
