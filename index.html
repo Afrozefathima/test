@@ -13,6 +13,12 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 
   <!-- Load your form bundle -->
-  <script src="https://haksyard.vercel.app/inquiry-form-vite/dist/assets/embed-form.js" onload="mountEmbedForm('google-sheet-inquiry-form')"></script>
+  <script src="https://haksyard.vercel.app/inquiry-form-vite/dist/assets/embed-form.js"></script>
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    mountEmbedForm('google-sheet-inquiry-form');
+  });
+</script>
+
 </body>
 </html>
